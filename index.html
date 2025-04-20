@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Twitter Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f8fa;
+      display: flex;
+    }
+    .sidebar {
+      width: 240px;
+      background: #1da1f2;
+      color: white;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar img {
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      border: 3px solid white;
+    }
+    .sidebar h2 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+    .menu {
+      margin-top: 30px;
+    }
+    .menu a {
+      display: block;
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .menu a:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+    .welcome-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    .welcome-box h1 {
+      color: #1da1f2;
+      margin-bottom: 15px;
+    }
+    .btn {
+      background: #1da1f2;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .table-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .card {
+      border: 1px solid #eee;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png" alt="Profil Fotoğrafı">
+    <h2>@rich1stfol49042</h2>
+
+    <div class="menu">
+      <a href="dashboard.php">🏠 Home</a>
+      <a href="send-followers.php">🚀 Services (ALWAYS FREE)</a>
+          <a href="news.php">📰 News</a>
+
+      <a href="logout.php">🔓 Logout</a>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="welcome-box">
+      <h1>Welcome, @rich1stfol49042 👋</h1>
+      <p><strong>🚦 Credit:</strong> 0/20</p>
+      <p><strong>🕒 Remaining time for next credit:</strong> <span id="countdown"></span></p>
+      <p><strong>📜 Total Orders:</strong> 2</p>
+              <p><strong>⏱️ Last Order :</strong> 10 <br>
+        20.04.2025 02:28 | https://www.instagram.com/elraven9ya?igsh=NWptanR2MzFkNGZ0</p>
+            <p><strong>📊 Twitter Profil:</strong><br>
+        0 Followers  — 0 Following — 0 Tweet
+      </p>
+      <a href="send-followers.php" class="btn">🚀 Services</a>
+    </div>
+
+    <div class="table-box">
+      <h3 style="color:#1da1f2;">📦 Your Last 3 Orders</h3>
+              <div class="card">
+          <strong>Order Amount: 10 </strong> →
+          https://www.instagram.com/elraven9ya?igsh=NWptanR2MzFkNGZ0<br>
+          <small>20.04.2025 02:28</small>
+        </div>
+              <div class="card">
+          <strong>Order Amount: 10 </strong> →
+          https://www.instagram.com/elraven9ya?igsh=NWptanR2MzFkNGZ0<br>
+          <small>20.04.2025 02:09</small>
+        </div>
+          </div>
+
+  </div>
+
+  <script>
+  let seconds = 0;
+  function countdown() {
+    const m = Math.floor(seconds / 00);
+    const s = seconds % 00;
+    document.getElementById('countdown').innerText = `${m} minutes ${s} second`;
+    if (seconds > 0) {
+      seconds--;
+      setTimeout(countdown, 0000);
+    } else {
+      //location.reload();
+    }
+  }
+  countdown();
+  </script>
+
+</body>
+</html>
+
